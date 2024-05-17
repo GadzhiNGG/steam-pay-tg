@@ -2,7 +2,7 @@ from aiogram import Bot, Dispatcher, F, Router
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 
-from config.config import smiles
+from config.config import smile
 import key as k
 
 router = Router()
@@ -11,7 +11,7 @@ router = Router()
 async def cmd_start(message: Message):
     await message.answer(f'Привет, {message.from_user.first_name}, я помогу тебе пополнить Steam, Epic, а также купить Discord Nitro')
     await message.answer_photo(photo='AgACAgIAAxkBAANTZkYlOOna2dteSiTsb0Tp7yumvd0AAofaMRv2uTFK_dxowo_mKWcBAAMCAAN5AAM1BA',
-                               caption=f'Рекламная вставка {x}',
+                               caption=f'Рекламная вставка {smile}',
                                reply_markup=k.main)
 
 @router.message(F.text.lower() == 'steam')
