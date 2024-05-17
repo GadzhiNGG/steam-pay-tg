@@ -24,7 +24,7 @@ async def steam_cmd(message:Message):
     await message.answer('Пополнить Epic Games',
                          reply_markup=k.epic)
     
-@router.message(F.text.lower() == 'Discord Nitro')
+@router.message(F.text.lower() == 'discord nitro')
 async def steam_cmd(message:Message):
     await message.answer('Оплатить Discord Nitro',
                          reply_markup=k.discord)
